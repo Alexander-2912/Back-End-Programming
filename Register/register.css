@@ -153,3 +153,10 @@ section .wave.wave4 {
     background-position-x: -1000px;
   }
 }
+
+.angular-reminder{
+  font-size: 14px;
+  margin-left: 7%;
+  margin-top: 1%;
+  color: red;
+}
