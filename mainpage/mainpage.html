@@ -134,19 +134,21 @@
             </div>
         </div>
         
-        <div class="card card-wrapper" style="width: 18rem; border-radius: 20px">
-            <div class="card-body">
-                <div class="card-title-background">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <div class="card card-wrapper" style="width: 18rem; border-radius: 20px" id="card-wrapper-id">
+          <div class="card-body"> 
+              <div class="card-title-background">
+                  <h5 class="card-title" id="card-title-value">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary" id="card-subtitle">Card subtitle</h6>
                 </div>
-                <h6 class="card-subtitle mb-2 text-body-secondary due-date">Due Date</h6>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-            </div>
-        </div>
+              <h6 class="card-subtitle mb-2 text-body-secondary due-date" id="card-due">Due Date</h6>
+              <button type="button" class="btn btn-success button-done"
+              id="button-done" onclick="doneItem()">Done</button>
+              <p class="card-text" id="card-text-value">
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+              </p>
+          </div>
+      </div>
     </div>
         
     <p class="todo-label-complete">Completed Tasks</p>
@@ -158,12 +160,27 @@
                   <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                 </div>
                 <h6 class="card-subtitle mb-2 text-body-secondary due-date">Due Date</h6>
+                <button class="btn btn-danger button-done" onclick="deleteItem()" id="button-delete">Delete</button>
               <p class="card-text">
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
               </p>
           </div>
       </div>
+      <div class="card card-wrapper" style="width: 18rem; border-radius: 20px">
+        <div class="card-body">
+            <div class="card-title-background" id="card-title-background">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+              </div>
+              <h6 class="card-subtitle mb-2 text-body-secondary due-date">Due Date</h6>
+              <button class="btn btn-danger button-done" onclick="deleteItem()" id="button-delete">Delete</button>
+            <p class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+            </p>
+        </div>
+    </div>
       
   </div>
 
