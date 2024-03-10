@@ -16,9 +16,7 @@ document.querySelector("#button-create-submit").addEventListener("click", functi
     document.querySelector(".popup").classList.remove("active");
 })
 
-let counter = 1
 function createItem(){
-    counter++;
 
     let title = document.getElementById("title").value;
     let subtitle = document.getElementById("subtitle").value;
@@ -116,6 +114,7 @@ function doneItem(){
     wrapper.classList.add("card-wrapper");
     wrapper.style.width = "18rem";
     wrapper.style.borderRadius = "20px";
+    wrapper.setAttribute("id", "card-wrapper-id-delete");
 
     let body = document.createElement("div")
     body.classList.add("card-body");
@@ -175,6 +174,6 @@ function doneItem(){
 }
 
 function deleteItem(){
-    var cardwrapper = document.getElementById("card-wrapper-id");
+    var cardwrapper = document.getElementById("card-wrapper-id-delete");
     cardwrapper.remove(); 
 }
