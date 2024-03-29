@@ -32,33 +32,33 @@
     </section>
 
     <div class="wrapper" name="myForm">
-        <form id="form-register" action="/mainpage">
+        <form id="form-register" action="/register" method="post">
             <h1>Register</h1>
             <div class="input-box">
                 <input type="text" placeholder="Full Name"
-                required id="fullname" ng-model="formName">
+                required id="fullname" ng-model="formName" name="name">
                 <p ng-show="!formName" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
                 <input type="text" placeholder="Email"
-                required ng-model="formEmail">
+                required ng-model="formEmail" name="email">
                 <p ng-show="!formEmail" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-user'></i>
             </div>          
             <div class="input-box">
                 <input type="password" placeholder="Password"
-                required id="password" ng-model="formPassword">
+                required id="password" ng-model="formPassword" name="password">
                 <p ng-show="!formPassword" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-lock-open-alt' ></i>
             </div>  
             <div class="input-box">
                 <input type="password" placeholder="Confirm Password"
-                required id="confirm-password" ng-model="formConfirm">
+                required id="confirm-password" ng-model="formConfirm" name="confirmPassword">
                 <p ng-show="!formConfirm" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-lock-open-alt' ></i>
             </div>  
-                <button type="submit" class="btn">Register</button>
+                <input type="submit" class="btn" value="Register" id="submit">
             <div class="register-link">
                 <p>Already have an account? <a href="/" class="register-button">Login</a></p>
             </div>
@@ -68,7 +68,6 @@
 
 
     <script src="register.js"></script>
-
     <script>
         var app = angular.module('myApp', []);
         app.controller('myController', function($scope) {

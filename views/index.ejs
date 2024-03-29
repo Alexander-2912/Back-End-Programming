@@ -30,26 +30,30 @@
     </section>
 
     <div class="wrapper" name="myForm">
-        <form action="/mainpage">
+        <form action="/" id="form-login" method="post">
             <h1>Login</h1>
             <div class="input-box">
                 <input type="text" placeholder="Email"
-                required ng-model="formEmail">
+                required ng-model="formEmail" name="email">
                 <p ng-show="!formEmail" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-user'></i>
             </div>    
             <div class="input-box">
                 <input type="password" placeholder="Password"
-                required ng-model="formPassword">
+                required ng-model="formPassword" name="password">
                 <p ng-show="!formPassword" class="angular-reminder">Please fill out this field*</p>
                 <i class='bx bxs-lock-open-alt' ></i>
             </div>  
-                <button type="submit" class="btn">Login</button>
+                <input type="submit" class="btn" value="Login" id="submit">
             <div class="register-link">
                 <p>Don't have an account? <a href="/register" class="register-button">Register</a></p>
             </div>
         </form>
     </div>
+
+    <script src="login.js"></script>
+    <!-- <script src="loginDB.js"></script> -->
+
 
 
     <script>

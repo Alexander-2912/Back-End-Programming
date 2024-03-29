@@ -24,6 +24,7 @@ function createItem(){
     let due = document.getElementById("due").value;
     let dateColor = document.getElementById("date-color").value;
     let description = document.getElementById("description").value;
+    let urgent = document.getElementById("urgent").checked
 
     let wrapper = document.createElement("div");
     wrapper.classList.add("card");
@@ -31,6 +32,11 @@ function createItem(){
     wrapper.style.width = "18rem";
     wrapper.style.borderRadius = "20px";
     wrapper.setAttribute("id", "card-wrapper-id");
+
+    console.log(urgent)
+    if(urgent == true){
+        wrapper.style.backgroundColor = "#ffb2c5"
+    }
 
     let body = document.createElement("div")
     body.classList.add("card-body");
