@@ -11,7 +11,7 @@ const loginSchema = new Schema({
     },
 })
 
-module.exports = model('loginSchema', loginSchema)
+module.exports = model('loginSchema', loginSchema , 'todos')
 
 
 
