@@ -34,6 +34,20 @@ async function createItem() {
   let dateColor = document.getElementById("date-color").value;
   let description = document.getElementById("description").value;
   let urgent = document.getElementById("urgent").checked;
+  const categoryInputs = document.querySelectorAll('input[name="category"]');
+
+  // Variabel untuk menyimpan nilai yang dipilih
+  let category = null;
+
+  // Iterasi melalui setiap elemen input
+  categoryInputs.forEach(input => {
+    // Periksa apakah elemen input terceklis
+    if (input.checked) {
+      // Jika diceklis, simpan nilai value-nya
+      category = input.value;
+    }
+  });
+
 
   const data = {
     title: title,
@@ -43,6 +57,7 @@ async function createItem() {
     urgent: urgent,
     description: description,
     dateColor: dateColor,
+    category: category
   };
 
   const id = getCookie("id");
@@ -96,6 +111,7 @@ function doneItem(id) {
       alert(error.message);
     });
 }
+
 async function getItem(
   title = "",
   status = null,
@@ -273,7 +289,8 @@ function card(
   dateColor,
   description,
   id,
-  status
+  status,
+  category
 ) {
   let wrapper = document.createElement("div");
   wrapper.classList.add("card");
@@ -310,7 +327,7 @@ function card(
   buttonContent.classList.add("row");
   buttonContent.classList.add("container");
   buttonContent.classList.add("gap-2");
-  buttonContent.classList.add("justify-content-beetween");
+  buttonContent.classList.add("justify-content-between");
   //   buttonContent.classList.add("")
 
   if (status) {
@@ -338,6 +355,7 @@ function card(
     button.textContent = "Done";
     button.classList.add("btn-success");
     button.classList.add("button-done");
+    button.style.widht = "100%";
     button.setAttribute("onclick", `doneItem('${id}')`);
     button.setAttribute("id", "button-done");
     buttonContent.appendChild(button);
