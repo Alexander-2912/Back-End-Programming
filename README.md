@@ -11,8 +11,12 @@ Meskipun banyak orang sudah sadar dengan pentingnya manajemen waktu dalam mening
 
 
 [1] Yanti, A. D., Ulhaq, F., & Jamaluddin, M. (2023). EFEKTIVITAS TO DO LIST TERHADAP PERILAKU DISIPLIN MAHASISWA. Liberosis: Jurnal Psikologi dan Bimbingan Konseling, 1(1), 81-90. https://ejournal.warunayama.org/index.php/liberosis/article/view/772
+
 [2] Cahyani, A., Agustin, D., Muslimah, I., & Khulliyatunnisa, N. (2023). Peran Aplikasi Notion dalam Perkuliahan untuk Mewujudkan Produktivitas Mahasiswa. Jurnal Pendidikan, Sains Dan Teknologi, 2(2), 262-273. http://jurnal.minartis.com/index.php/jpst/article/view/754
+
 [3] Panjaitan, M. (2017). Pengaruh Lingkungan Kerja Terhadap Produktivitas Kerja
 Karyawan. Jurnal Manejemen, 3(2), 1-5. http://ejournal.lmiimedan.net/index.php/jm/article/view/7/7.
+
 [4] Tjahyanti, S. (2013). Pengaruh Quality of Work Life Terhadap Produktivitas Karyawan. Media Bisnis, 5(1), 9-20. https://jurnaltsm.id/index.php/mb/article/view/1459
+
 [5] Purnama, R. (2008). Pengaruh Motivasi Kerja Terhadap Produktivitas Kerja Karyawan Pada Bagian Produksi Cv. Epsilon Bandung. Jurnal Pendidikan Manajemen Bisnis, 8(2), 58-82. https://ejournal.upi.edu/index.php/strategic/article/view/1028/679
