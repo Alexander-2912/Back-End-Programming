@@ -1,3 +1,4 @@
+// autentikasi pengguna 
 function auth(){
     var email = document.getElementById("email")
     var password = document.getElementById("password")

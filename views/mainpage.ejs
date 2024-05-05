@@ -15,17 +15,21 @@
 <body class="body objects">
   <div class="profile-button">
     <nav class="nav-profile">
+      <!--membuat logo untuk profile-->
       <img src="profile.png" class="brand-logo" style="width: 30px; height: 30px" />
+      <!--sebuah link ke halaman utama-->
       <ul class="navbar-list-left">
         <li class="navbar-list-item">
           <a href="/mainpage" class="navbar-link">Home</a>
         </li>
       </ul>
+      <!--sebuah link ke halaman category-->
       <ul class="navbar-list-left">
         <li class="navbar-list-item">
           <a href="/category" class="navbar-link">Category</a>
         </li>
       </ul>
+      <!--sebuah link ke halaman money-->
       <ul class="navbar-list-left">
         <li class="navbar-list-item">
           <a href="/money" class="navbar-link">Money</a>
@@ -38,34 +42,34 @@
             <h4 id="name_user"></h4>
           </div>
           <hr class="sub-menu-hr" />
+          <!--sebuah link ke halaman edit profile-->
           <a href="/profile" class="sub-menu-link">
             <i class="fa-solid fa-user sub-menu-link-img"></i>
             <p class="profile-dropdown-button">Edit Profile</p>
           </a>
-          <!-- <hr class="sub-menu-link-hr"> -->
+          <!--sebuah link ke halaman setting & privacy-->
           <a href="#" class="sub-menu-link">
             <i class="fa-solid fa-gear sub-menu-link-img"></i>
             <p class="profile-dropdown-button">Settings & Privacy</p>
           </a>
-          <!-- <hr class="sub-menu-link-hr"> -->
+          <!--sebuah link ke halaman help & support-->
           <a href="#" class="sub-menu-link">
             <i class="fa-solid fa-circle-question sub-menu-link-img"></i>
             <p class="profile-dropdown-button">Help & Support</p>
           </a>
-          <!-- <hr class="sub-menu-link-hr"> -->
+          <!--sebuah link ke halaman logout-->
           <a href="#" class="sub-menu-link">
             <i class="fa-solid fa-arrow-right-from-bracket sub-menu-link-img"></i>
             <p class="profile-dropdown-button">Logout</p>
           </a>
-          <!-- <hr class="sub-menu-link-hr"> -->
         </div>
       </div>
     </nav>
   </div>
 
-  <div class="m-4">
+  <div class="m-4"> <!--margin-->
     <div class="d-inline">
-      <div style="display: flex; gap: 3">
+      <div style="display: flex; gap: 3"> <!--mengatur jarak-->
         <input id="keyword" type="text" class="form-control" placeholder="Cari title" style="width: 20%" />
         <label for="Urgent" style="margin-left: 10px">Urgent</label>
         <input onclick="filterUrgent()" id="urgent_filter" type="checkbox"
@@ -78,6 +82,7 @@
       </div>
     </div>
     <div class="mt-2">
+      <!--tombol-->
       <button class="btn btn-primary" onclick="cari()" style="width: 20%">Cari</button>
     </div>
   </div>
@@ -86,6 +91,7 @@
     <div class="todo-label-wrapper">
       <p class="todo-label">Your To Do List</p>
     </div>
+    <!--logo untuk tombol create-->
     <div class="button-add-wrapper">
       <button class="button-add" id="button-create">
         <span>Create</span><i></i>

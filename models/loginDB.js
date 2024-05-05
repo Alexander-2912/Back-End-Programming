@@ -1,5 +1,6 @@
 const {Schema, model} = require('mongoose')
 
+// definisi skema menggunakan Mongoose dalam aplikasi Node.js
 const loginSchema = new Schema({
     email: {
         type: String,
@@ -11,8 +12,6 @@ const loginSchema = new Schema({
     },
 })
 
+// definisi model menggunakan Mongoose dalam aplikasi Node.js
 module.exports = model('loginSchema', loginSchema , 'todos')
 
-
-
-// const collection = new mongoose.model('login', loginSchema)

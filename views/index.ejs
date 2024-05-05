@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
+  <!-- membuat struktur dasar -->
   <body ng-controller="myController">
     <section>
       <div class="wave wave1"></div>
@@ -30,7 +30,7 @@
       <div class="wave wave3"></div>
       <div class="wave wave4"></div>
     </section>
-
+    <!-- membuat kolom login -->
     <div class="wrapper" name="myForm">
       <form action="" id="form-login" method="post">
         <h1>Login</h1>
@@ -42,6 +42,7 @@
             ng-model="formEmail"
             name="email"
           />
+          <!-- pesan peringatan -->
           <p ng-show="!formEmail" class="angular-reminder">
             Please fill out this field*
           </p>
@@ -105,6 +106,7 @@
               window.location.href = "/mainpage"; // Ganti dengan halaman yang sesuai
 
             })
+            //menangkap kesalahan 
             .catch(function (error) {
               alert(error.message);
               console.error("Error:", error);

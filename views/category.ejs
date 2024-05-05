@@ -13,7 +13,9 @@
 </head>
 
 <body class="body objects">
+    <!-- kelas profile button --> 
     <div class="profile-button">
+        <!--navigasi dalam halaman web-->
         <nav class="nav-profile">
             <img src="profile.png" class="brand-logo" style="width: 30px; height: 30px" />
             <ul class="navbar-list-left">
@@ -21,22 +23,26 @@
                     <a href="/mainpage" class="navbar-link">Home</a>
                 </li>
             </ul>
+            <!--navigasi dalam halaman web yang berisi tautan navigasi ke halaman kategori situs web-->
             <ul class="navbar-list-left">
                 <li class="navbar-list-item">
                     <a href="/category" class="navbar-link">Category</a>
                 </li>
             </ul>
+            <!--halaman web tautan navigasi ke halaman dengan topik "money" dalam situs web-->
             <ul class="navbar-list-left">
                 <li class="navbar-list-item">
                   <a href="/money" class="navbar-link">Money</a>
                 </li>
               </ul>
+            <!--menampilkan informasi pengguna dalam sebuah submenu-->
             <img src="profile.png" class="profile-logo" onclick="toggleMenu()" style="width: 30px; height: 30px" />
             <div class="sub-menu-wrap" id="submenu">
                 <div class="sub-menu">
                     <div class="user-info">
                         <h4 id="name_user"></h4>
                     </div>
+                    <!--menampilkan tautan untuk mengarahkan pengguna ke halaman Edit Profile-->
                     <hr class="sub-menu-hr" />
                     <a href="/profile" class="sub-menu-link">
                         <i class="fa-solid fa-user sub-menu-link-img"></i>
@@ -63,20 +69,25 @@
         </nav>
     </div>
 
+    <!--untuk tombol dan label yang terkait dengan tugas todo-->
     <div class="todo-button-wrapper">
         <div class="todo-label-wrapper">
 
         </div>
     </div>
+    <!--menciptakan sebuah judul dan wadah untuk konten terkait kategori-->
     <h1 class="container">Category</h1>
     <div class="container">
+        <!--menciptakan sebuah judul dan wadah untuk konten terkait work-->
         <h4>Work</h4>
         <div id="work" class="mb-4"
             style="width: 100%; border: 1px solid black; padding: 20px; border-radius: 10px; display: flex;">
         </div>
+        <!--menciptakan sebuah judul dan wadah untuk konten terkait assignments-->
         <h4>Assignment</h4>
         <div id="assignment" class="mb-4"
             style="width: 100%; border: 1px solid black; padding: 20px; border-radius: 10px; display: flex;"></div>
+        <!--menciptakan sebuah judul dan wadah untuk konten terkait kegiatan-->
         <h4>College</h4>
         <div id="college" class="mb-4"
             style="width: 100%; border: 1px solid black; padding: 20px; border-radius: 10px; display: flex;"></div>
@@ -86,10 +97,12 @@
     <%- include('layouts/footer.ejs') %>
 
         <script>
+            // mengubah status tampilan menu
             function toggleMenu() {
                 submenu.classList.toggle("open-menu");
             }
             async function getData() {
+                // mengambil data todos dari server menggunakan API
                 var id = getCookie('id');
                 const url = `/api/todos/${id}`
                 var response = await fetch(url);
@@ -97,6 +110,7 @@
                 const todos = responseTodos = responseBody.todos;
 
 
+                // proses pembuatan elemen-elemen UI berdasarkan data yang ada dalam array todos
                 todos.map((item, index) => {
                     console.log(item.category)
                     if (item.category == 'Work') {
@@ -112,9 +126,9 @@
                             item.status,
                             item.category
                         );
-
+                        // menambahkan sebuah elemen yang dibuat sebelumnya ke dalam struktur DOM
                         document.getElementById('work').appendChild(cardTodo);
-
+                        // membuat dan menambahkan elemen card ke dalam elemen dengan ID college
                     } else if (item.category == 'College') {
                         const cardTodo = card(
                             item.urgent,
@@ -131,7 +145,7 @@
                         document.getElementById('college').appendChild(cardTodo);
 
 
-
+                        // membuat dan menambahkan elemen card ke dalam elemen dengan ID assignment
                     } else if (item.category == 'Assignment') {
                         const cardTodo = card(
                             item.urgent,
@@ -152,7 +166,7 @@
                 })
 
             }
-
+            //  deklarasi sebuah fungsi JavaScript bernama card
             function card(
                 urgent,
                 titleColor,
@@ -165,6 +179,7 @@
                 status,
                 category
             ) {
+                // menciptakan sebuah wrapper untuk sebuah card dalam DOM
                 let wrapper = document.createElement("div");
                 wrapper.classList.add("card");
                 wrapper.classList.add("card-wrapper");
@@ -172,23 +187,28 @@
                 wrapper.style.borderRadius = "20px";
                 wrapper.setAttribute("id", "card-wrapper-id");
 
+                // menetapkan warna latar belakang untuk card
                 console.log(urgent);
                 if (urgent == true) {
                     wrapper.style.backgroundColor = "#ffb2c5";
                 }
 
+                // menciptakan wrapper untuk tubuh dari card
                 let body = document.createElement("div");
                 body.classList.add("card-body");
 
+                // menciptakan elemen div untuk judul card, menambahkan kelas dan mengatur latar belakang
                 let cardTitle = document.createElement("div");
                 cardTitle.classList.add("card-title-background");
                 cardTitle.style.backgroundColor = titleColor;
 
+                // menciptakan elemen heading untuk judul card 
                 let h5 = document.createElement("h5");
                 h5.classList.add("card-title");
                 h5.textContent = title;
                 h5.setAttribute("id", "card-title-value");
 
+                // menciptakan elemen heading untuk subjudul card
                 let h6 = document.createElement("h6");
                 h6.classList.add("card-subtitle");
                 h6.classList.add("mb-2");
@@ -196,23 +216,25 @@
                 h6.textContent = subtitle;
                 h6.setAttribute("id", "card-subtitle");
 
+                //   buttonContent.classList.add("")
                 let buttonContent = document.createElement("div");
                 buttonContent.classList.add("row");
                 buttonContent.classList.add("container");
                 buttonContent.classList.add("gap-2");
                 buttonContent.classList.add("justify-content-beetween");
-                //   buttonContent.classList.add("")
-
+            
+                // button.classList.add("button-done");
                 let button = document.createElement("di");
                 button.textContent = "Delete";
                 button.classList.add("btn");
                 button.classList.add("btn-danger");
-                // button.classList.add("button-done");
 
+                // membuat sebuah tombol 
                 button.setAttribute("onclick", `deleteItem('${id}')`);
                 button.setAttribute("id", "button-edit");
                 buttonContent.appendChild(button);
 
+                //membuat elemen h6
                 let h6p2 = document.createElement("h6");
                 h6p2.classList.add("card-subtitle");
                 h6p2.classList.add("mb-2");
@@ -222,11 +244,13 @@
                 h6p2.textContent = due;
                 h6p2.setAttribute("id", "card-due");
 
+                // menampilkan tanggal jatuh tempo dalam kartu
                 let p = document.createElement("p");
                 p.classList.add("card-text");
                 p.textContent = description;
                 p.setAttribute("id", "card-text-value");
 
+                // menciptakan elemen paragraf untuk teks konten kartu
                 wrapper.appendChild(body);
                 body.append(cardTitle);
                 cardTitle.append(h5);
@@ -238,17 +262,20 @@
             }
 
 
+            // untuk melakukan permintaan penghapusan item
             async function deleteItem(id) {
                 const idUser = getCookie("id");
                 const myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
 
+                // mengonversi objek JavaScript menjadi string JSON
                 const raw = JSON.stringify({
                     todoId: id,
                 });
-
+                //mencetak isi 'raw'
                 console.log(raw);
 
+                // melakukan permintaan HTTP tipe DELETE ke suatu sumber
                 const requestOptions = {
                     method: "delete",
                     headers: myHeaders,
@@ -256,6 +283,7 @@
                     redirect: "follow",
                 };
 
+                // upermintaan HTTP untuk menghapus todo dengan ID tertentu
                 fetch(`/api/todos/${idUser}/delete`, requestOptions)
                     .then((result) => {
                         alert("Berhasil hapus todo");
@@ -266,6 +294,7 @@
                     });
             }
 
+            // mengambil item dari sumber data dengan mempertimbangkan parameter
             async function getItem(
                 title = "",
                 status = null,
@@ -290,8 +319,7 @@
                 }
             }
 
-
-
+            //mengembalikan nilai cookie
             function getCookie(cookieName) {
                 const cookies = document.cookie.split(";");
                 for (const cookie of cookies) {

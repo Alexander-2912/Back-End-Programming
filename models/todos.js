@@ -1,5 +1,8 @@
+// pengembangan aplikasi menggunakan Node.js dan MongoDB dengan bantuan Mongoose
 const { Schema, model } = require("mongoose");
 const mongoose = require("mongoose");
+
+//  struktur data untuk dokumen-dokumen yang akan disimpan dalam koleksi bernama 'todos'
 
 const todosSchema = new Schema({
   name: {
@@ -49,6 +52,7 @@ const todosSchema = new Schema({
   ]
 });
 
+// model Mongoose untuk skema todosSchema 
 module.exports = registerData = new mongoose.model(
   "todosSchema",
   todosSchema,

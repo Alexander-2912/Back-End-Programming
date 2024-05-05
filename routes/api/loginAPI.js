@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
         if (!user) {
             return res.status(401).json({ message: 'Email atau password salah' });
         }
-
+        
+        // memverifikasi password yang dimasukkan pengguna sesuai yang disimpan dibasis
         const passwordMatch = await bcrypt.compare(password, user.password);
 
         if (!passwordMatch) {
@@ -29,5 +30,5 @@ router.post('/', async (req, res) => {
 });
 
 
-
+//mengekspor module 'router'
 module.exports = router

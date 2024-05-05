@@ -1,10 +1,12 @@
+/* mengatur tampilan background */
 .navbar-background{
     background-color: #f15e34;
 }
-
+/* mengatur tampilan padding */
 .navbar-padding{
     padding-left: 4%;
 }
+/* mengatur tampilan profil */
 .profile-button{
     width: 100%;
     /* min-height: 100vh; */
@@ -13,36 +15,37 @@
     position: relative;
     z-index: 1;
 }
-
+/* mengatur tampilan foto pada profil */
 .profile-logo{
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
     margin-left: 30px;
 }
-
+/* mengatur tampilan list sebelah kiri */
 .navbar-list-left{
     width: 100%;
     text-align: left;
     margin-bottom: 0px;
-}
+}/* Gaya untuk daftar navbar di sebelah kanan */
 .navbar-list-right{
     width: 100%;
     text-align: right;
     margin-bottom: 0px;
 }
+/* Gaya untuk setiap item dalam daftar navbar */
 .navbar-list-item{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-
+/* mengatur tampilan dari link */
 .navbar-link{
     color: #1a1919;
     text-decoration: none;
     font-weight: 500;
 }
-
+/* mengatur tampilan sub menu */
 .sub-menu-wrap{
     position: absolute;
     top: 100%;
@@ -53,11 +56,11 @@
     transition: max-height 0.5s;
     border-radius: 10px;
 }
-
+/* mengatur tampilan menu */
 .sub-menu-wrap.open-menu{
     max-height: 400px;
 }
-
+/* mengatur tampilan submenu */
 .sub-menu{
     background-color: #429986;
     padding: 20px;
@@ -68,35 +71,37 @@
     border-color: #1d7874;
     border-width: 1px;
 }
-
+/* mengatur tampilan info pengguna */
 .user-info{
     display: flex;
     align-items: center;
     
 }
-
+/* mengatur tampilan judul */
 .user-info h4{
     font-weight: 500;
 }
-
+/* mengatur tampilan avatar profil */
 .user-profile-img{
     width: 50px;
     border-radius: 50%;
     cursor: pointer;
     margin-right: 1rem;
 }
+/* mengatur tampilan tombol  */
 .profile-dropdown-button{
     margin: 0%;
     color: #e5e5e5;
 
 }
+/* mengatur tampilan sub menu */
 .sub-menu-hr{
     height: 1px;
     width: 100%;
     background: #ccc;
     margin: 15px 0 10px;
 }
-
+/* mengatur tampilann link submenu */
 .sub-menu-link{
     display: flex;
     align-items: center;
@@ -104,7 +109,7 @@
     color: #525252;
     margin: 12px 0;
 }
-
+/* mengatur tampilan link submenu */
 .sub-menu-link-hr{
     margin-top: 3%;
     margin-bottom: 3%;
@@ -114,7 +119,7 @@
 .sub-menu-link p{
     width: 100%;
 }
-
+/* mengatur tampilan  */
 .sub-menu-link-img{
     background-color: #e5e5e5;
     border-radius: 50%;
@@ -131,6 +136,7 @@
     transform: translateX(5px);
     transition: transform 0.5s;
 }
+/* mengatur tampilan profil */
 .nav-profile{
     width: 100%;
     padding: 10px 4%;
@@ -139,11 +145,11 @@
     justify-content: space-between;
     position: relative;
 }
-
+/* mengatur tampilan background */
 .body{
     background-color: #f8db9a;
 }
-
+/* mengatur tampilan kotak */
 .card{
     margin: 2rem 2rem;
     padding: 1%;
@@ -154,21 +160,21 @@
     background-color:#f15e34;
     padding: 3%;
 }
-
+/* mengatur tampilan label */
 .todo-label{
     margin-left: 8.5%;
     margin-top: 2.7%;
     /* padding-top: 2%; */
     font-size: 1.5rem;
 }
-
+/* mengatur tampilan labelberhasil */
 .todo-label-complete{
     margin-left: 4%;
     margin-top: 2.7%;
     /* padding-top: 2%; */
     font-size: 1.5rem;
 }
-
+/* mengatur tampilan border */
 .todo-border{
     border-style: solid;
     border-width: thin;
@@ -188,13 +194,13 @@
     border-radius: 35px;
     margin-left: 2%
 }
-
+/* mengatur tampilan due date */
 .due-date{
     background-color: bisque;
     padding: 3% 3%;
     border-radius: 0 0 5px 5px;
 }
-
+/* mengatur tampilan tombol */
 .button-add{
     position: relative;
     background: #3fc4e4;
@@ -209,7 +215,7 @@
     margin-bottom: 2%;
     margin-right: 3%
 }
-
+/* mengatur tampilan tombol */
 .button-add:hover{
     letter-spacing: 0.25rem;   
 }
@@ -286,7 +292,7 @@
     text-align: right;
     margin-right: 3%;
 }
-
+/* mengatur tampilan pop up */
 .popup {
     position: fixed;
     top: -150%;
@@ -303,7 +309,7 @@
                 transform 200ms ease-in-out 0ms;
     z-index: 1;
 }
-
+/* mengatur tampilan pop up */
 .popup.active{
     top: 50%;
     opacity: 1;
@@ -313,6 +319,7 @@
     transform 200ms ease-in-out 0ms;
     
 }
+/* mengatur tampilan tombol 'tutup' */
 .popup .close-btn{
     position: absolute;
     top: 10px;
@@ -326,7 +333,7 @@
     border-radius: 15px;
     cursor: pointer;
 }
-
+/* mengatur tampilan  */
 .popup .form h2{
     text-align: center;
     color: #222;
@@ -338,7 +345,7 @@
     margin: 15px 0px;
     color: #222;
 }
-
+/* mengatur tampilan pop up */
 .popup .form .form-element input[type="text"],
 .popup .form .form-element input[type="password"],
 .popup .form .form-element input[type="date"]{
@@ -350,7 +357,7 @@
     border: 1px solid #ff86b8;
     border-radius: 15px;
 }
-
+/* mengatur tampilan judul notes */
 .title-color{
     margin-top: 5px;
     display: block;
@@ -360,7 +367,7 @@
     border: 1px solid #ff86b8;
     border-radius: 5px;
 }
-
+/* mengatur tampilan tanggal */
 .date-color{
     margin-top: 5px;
     display: block;
@@ -382,7 +389,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
-
+/* mengatur posisi elemen */
 .form-element{
     margin: 5%
 }
@@ -398,7 +405,7 @@
     border-radius: 15px;
     padding: 3%
 }
-
+/* mengatur tampilan tombol  submit */
 .button-create-submit{
     width: 100%;
     align-items: center;
@@ -410,7 +417,7 @@
     margin: auto;
     width: 90%;
 }
-
+/* mengatur tampilan tombol done */
 .button-done{
     margin-top:auto;
     width: 100%
@@ -442,7 +449,7 @@
     border-radius: 50%;
     background-color: #FF6A88;
 }
-
+/* mengatur tampilan animasi pada background */
 .box li:nth-child(1){
     left: 86%;
     width: 80px;
@@ -482,7 +489,7 @@
     height: 110px;
     animation-delay: 3.5s;
 }
-
+/* mengatur animasi pada background */
 @keyframes animate{
     0%{
         transform: translateY(0) scale(0)

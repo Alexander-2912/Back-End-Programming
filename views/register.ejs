@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
+<!-- Halaman HTML dengan pengontrol "myController" -->
   <body ng-controller="myController">
     <section>
       <div class="wave wave1"></div>
@@ -31,10 +31,11 @@
       <div class="wave wave3"></div>
       <div class="wave wave4"></div>
     </section>
-
+<!-- Wrapper untuk formulir registrasi -->
     <div class="wrapper" name="myForm">
       <form id="form-register" ng-submit="register()" method="post">
-        <h1>Register</h1>
+        <h1>Register</h1><!-- Judul formulir -->
+        <!-- Kotak input untuk nama lengkap -->
         <div class="input-box">
           <input
             type="text"
@@ -43,25 +44,26 @@
             id="fullname"
             ng-model="formName"
             name="name"
-          />
+          /><!-- Pesan peringatan jika nama tidak diisi -->
           <p ng-show="!formName" class="angular-reminder">
             Please fill out this field*
           </p>
           <i class="bx bxs-user"></i>
         </div>
-        <div class="input-box">
+        <div class="input-box"><!-- Kotak input untuk alamat email -->
           <input
             type="text"
             placeholder="Email"
             required
             ng-model="formEmail"
             name="email"
-          />
+          /><!-- Pesan peringatan jika email tidak diisi -->
           <p ng-show="!formEmail" class="angular-reminder">
             Please fill out this field*
           </p>
           <i class="bx bxs-user"></i>
         </div>
+         <!-- Kotak input untuk kata sandi -->
         <div class="input-box">
           <input
             type="password"
@@ -71,11 +73,13 @@
             ng-model="formPassword"
             name="password"
           />
+          <!-- Pesan peringatan jika kata sandi tidak diisi -->
           <p ng-show="!formPassword" class="angular-reminder">
             Please fill out this field*
           </p>
           <i class="bx bxs-lock-open-alt"></i>
         </div>
+        <!-- Kotak input untuk konfirmasi kata sandi -->
         <div class="input-box">
           <input
             type="password"
@@ -85,12 +89,15 @@
             ng-model="formConfirm"
             name="confirmPassword"
           />
+          <!-- Pesan peringatan jika konfirmasi kata sandi tidak diisi -->
           <p ng-show="!formConfirm" class="angular-reminder">
             Please fill out this field*
           </p>
           <i class="bx bxs-lock-open-alt"></i>
         </div>
+        <!-- Tombol untuk mengirimkan formulir -->
         <input type="submit" class="btn" value="Register" id="submit" />
+        <!-- Tautan untuk login jika sudah memiliki akun -->
         <div class="register-link">
           <p>
             Already have an account?
